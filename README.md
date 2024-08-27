@@ -57,12 +57,14 @@ R =
 
 ### Graphical Representation
 
-![RL ](https://github.com/NivethaKumar30/mdp-representation/assets/119559844/82c0d767-6a3d-406b-b31a-d6c013eff33b)
+![311033661-82c0d767-6a3d-406b-b31a-d6c013eff33b](https://github.com/user-attachments/assets/617d1837-68e7-40e6-af0e-481140a9c52e)
 
 
 ## PYTHON REPRESENTATION:
 
 ```
+DEVLOPED BY : BALAMURUGAN B
+REG NO. : 212222230016
 Toddler =
 { 
     # Starting point state (S) -> 0
