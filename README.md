@@ -1,4 +1,4 @@
-# MDP REPRESENTATION
+# EX-01 MDP REPRESENTATION
 
 ## AIM:
 To represent any one real-world problem in MDP form.
