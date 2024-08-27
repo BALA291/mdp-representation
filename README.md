@@ -1,73 +1,121 @@
 # EX-01 MDP REPRESENTATION
 
 ## AIM:
-To represent any one real-world problem in MDP form.
+To represent a Markov Decision Process(MDP) problem in the following ways:
+
+Text representation
+
+Graphical representation
+
+Python - Dictonary representation
 
 ## PROBLEM STATEMENT:
-A customer is planning to buy a product online. They have three websites to choose from: Option A, Option B, and Option C. The customer wants to select the best website based on their preferences and the associated rewards.
+
+A toddler is learning to walk. The toddler starts out by crawling, and then eventually learns to stand up and walk. The toddler must learn to balance itself and take steps, while also avoiding obstacles.
 
 ### Problem Description
-choosing the best website to buy
+The toddler has to reach the goal state(moving forward to target) by taking the correct step towards the goal without hitting any obstacles or losing balance. After reaching the goal the toddler will be rewarded if not then no reward will be provided.
 
-### State Space
-The state space consists of the different options available for the customer to choose from:
-```
-State 0: Website A
-State 1: Website B
-State 2: Website C
-```
+State Space :
 
+{S,B,G,O}->{0,1,2,3
+```
+0-> Starting point (S)
+  
+1-> Balanced walking (B)
+  
+2-> Targeted point (G)
+
+3-> Dashed onto obstacle (O)
+```
 ### Sample State
-A sample state could be the customer currently considering website B.
+
+B-> 1-> Balanced walking
 
 ### Action Space
-The action space consists of the decisions the customer can make:
-```
-Action 0: Stay with the current option
-Action 1: Switch to the next option
-```
+
+{W,C}->{1,2}
+
+W-> Walking
+
+C-> Crawling
 
 ### Sample Action
-A sample action could be the customer deciding to switch from Website A to Website B.
+
+W-> 1-> Walking
+
+C-> 2-> Crawling
 
 ### Reward Function
 ```
-The customer receives a reward of 0 for staying with the current option.
-If the customer switches to the last option (Website C), they receive a reward of 1.
-There are no intermediate rewards for other actions or states.
-```
-
-### Graphical Representation
-![WhatsApp Image 2024-08-27 at 13 08 10_283c973e](https://github.com/user-attachments/assets/c12e4354-11de-4d13-8070-e2d113970320)
-
-### Program
-```
-Developed By : BALAMURUGAN B
-Reg No : 212222230016
-
-P = {
-    0:{
-        0: [(1.0, 0, 0.0, True)],  
-        1: [(1.0, 1, 0.0, True)]   
-    },
-    1:{
-        0: [(1.0, 1, 0.0, True)],  
-        1: [(1.0, 2, 1.0, True)]   
-    },
-    2:{
-        0: [(1.0, 2, 0.0, True)],  
-        1: [(1.0, 2, 0.0, True)]   
-    }
+R =
+{
+    +1, if : the toddler comes to the targeted point
+    0, else : no reward
 }
 ```
 
+### Graphical Representation
+
+![RL ](https://github.com/NivethaKumar30/mdp-representation/assets/119559844/82c0d767-6a3d-406b-b31a-d6c013eff33b)
+
+
+## PYTHON REPRESENTATION:
+
+```
+Toddler =
+{ 
+    # Starting point state (S) -> 0
+    # Action: Walking (W) -> 1, Crawling (C) -> 2
+
+  0:
+  {
+
+     1:[(0.82 , 1 , 0,False),(0.18 , 0 , 0 , False)],
+     2:[(0.88 , 0 , 0,False),(0.12 , 1 , 0 , False)]
+
+  },
+
+    # Balanced walking state (B) -> 1
+
+  1:
+  {
+     1:[(0.91 , 2 , 0,False),(0.09 , 0 , 0 , False)],
+     2:[(0.75 , 0 , 0,False),(0.25 , 2 , 0 , False)]
+
+  },
+
+    # Targeted point state (G) -> 2
+
+  2:
+  {
+
+      1:[(0.92 , 3 , 1,True),(0.08 , 1 , 0 , False)],
+      2:[(0.91 , 1 , 0,False),(0.09 , 3 , 1 , True)]
+
+  },
+
+    # Dashed onto obstacle state (O) -> 3
+
+  3:
+  {
+
+      1:[(0.82, 3 , 0, True),(0.18 , 2 , 0 , False)],
+      2:[(0.73, 2 , 0, False),(0.27 , 3 , 0 , True)]
+
+  }
+
+}
+
+Toddler
+```
 
 ## OUTPUT:
 
-![Screenshot 2024-02-25 204439](https://github.com/Nagul71/mdp-representation/assets/118661118/8ab226d5-968f-4165-b900-fab5b5612d7b)
+![image](https://github.com/NivethaKumar30/mdp-representation/assets/119559844/157c30a4-976b-4472-b016-45c7b941ebbf)
 
 
 ## RESULT:
 
-Thus the given real world problem is successfully represented in a MDP form .
+Thus, to represent a Markov Decision Process (MDP) problem in the representation of text, graphical and also by python program by displaying an appropriate dictionary for the above mentioned problem is implemented and executed successfully.
 
