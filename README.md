@@ -42,9 +42,8 @@ There are no intermediate rewards for other actions or states.
 
 ### Program
 ```
-Developed By:
-Name : NAGUL K
-Reg No : 212222230089
+Developed By : BALAMURUGAN B
+Reg No : 212222230016
 
 P = {
     0:{
